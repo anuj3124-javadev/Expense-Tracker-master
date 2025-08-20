@@ -1,0 +1,12 @@
+<main class="w-screen h-screen bg-orange-300 "
+  style="background-image: linear-gradient(45deg, transparent 0%, transparent 2%,rgba(116, 116, 116,0.04) 2%, rgba(116, 116, 116,0.04) 36%,transparent 36%, transparent 100%),linear-gradient(0deg, transparent 0%, transparent 48%,rgba(116, 116, 116,0.04) 48%, rgba(116, 116, 116,0.04) 64%,transparent 64%, transparent 100%),linear-gradient(90deg, transparent 0%, transparent 70%,rgba(116, 116, 116,0.04) 70%, rgba(116, 116, 116,0.04) 73%,transparent 73%, transparent 100%),linear-gradient(90deg, transparent 0%, transparent 17%,rgba(116, 116, 116,0.04) 17%, rgba(116, 116, 116,0.04) 54%,transparent 54%, transparent 100%),linear-gradient(90deg, rgb(255,255,255),rgb(255,255,255));">
+  <app-input />
+  <div class="lg:hidden absolute top-[70px] lg:top-[100px]">
+    @if (menuToggle()) {
+    <app-history />
+    }
+  </div>
+<div class="hidden lg:flex">
+  <app-history/>
+</div>
+</main>

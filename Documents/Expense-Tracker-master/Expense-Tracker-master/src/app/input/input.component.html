@@ -1,0 +1,40 @@
+<section>
+    <div style="background-image: linear-gradient(135deg, rgba(159, 159, 159, 0.46) 0%, rgba(159, 159, 159, 0.46) 14.286%,rgba(165, 165, 165, 0.46) 14.286%, rgba(165, 165, 165, 0.46) 28.572%,rgba(171, 171, 171, 0.46) 28.572%, rgba(171, 171, 171, 0.46) 42.858%,rgba(178, 178, 178, 0.46) 42.858%, rgba(178, 178, 178, 0.46) 57.144%,rgba(184, 184, 184, 0.46) 57.144%, rgba(184, 184, 184, 0.46) 71.43%,rgba(190, 190, 190, 0.46) 71.43%, rgba(190, 190, 190, 0.46) 85.716%,rgba(196, 196, 196, 0.46) 85.716%, rgba(196, 196, 196, 0.46) 100.002%),linear-gradient(45deg, rgb(252, 252, 252) 0%, rgb(252, 252, 252) 14.286%,rgb(246, 246, 246) 14.286%, rgb(246, 246, 246) 28.572%,rgb(241, 241, 241) 28.572%, rgb(241, 241, 241) 42.858%,rgb(235, 235, 235) 42.858%, rgb(235, 235, 235) 57.144%,rgb(229, 229, 229) 57.144%, rgb(229, 229, 229) 71.43%,rgb(224, 224, 224) 71.43%, rgb(224, 224, 224) 85.716%,rgb(218, 218, 218) 85.716%, rgb(218, 218, 218) 100.002%);"
+        class="w-screen text-center h-[70px] lg:h-[100px] bg-white flex items-center select-none cursor-default justify-between px-4 lg:justify-center text-2xl lg:text-3xl font-semibold italic shadow-md shadow-stone-800 ">
+        <h1 class="lg:hidden">
+            @if (!menuToggle()) {
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000"
+                fill="none" (click)="toggleMenu()">
+                <path d="M4 5L16 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M4 12L20 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M4 19L12 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+            }
+            @else {
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000"
+                fill="none" (click)="toggleMenu()">
+                <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            }
+        </h1>
+        <h1><span class="text-3xl lg:text-4xl ">&#x20b9;</span>  Expense Tracker</h1>
+    </div>
+    @if (!menuToggle()) {
+
+
+    <div class=" px-5 lg:px-40 py-5">
+        <div class="flex flex-col lg:flex-row gap-4 lg:gap-10 justify-center items-center pb-4">
+            <input type="text" placeholder="Enter Title" [(ngModel)]="title"
+                class=" border-2 border-black py-2 px-5 rounded-full hover:shadow-md w-full" />
+            <input type="text" placeholder="Enter Amount" [(ngModel)]="amount"
+                class=" border-2 border-black py-2 px-5 rounded-full hover:shadow-md w-full" />
+        </div>
+        <button (click)="addExpense()"
+            class=" border-2 border-black py-2 px-5 rounded-full hover:shadow-md w-full bg-stone-400 hover:bg-stone-500 hover:font-bold cursor-pointer">Add</button>
+    </div>
+    }
+</section>
